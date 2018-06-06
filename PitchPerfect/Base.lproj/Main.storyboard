@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,47 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx5-XN-rjr">
+                                <rect key="frame" x="163" y="318" width="49" height="31"/>
+                                <color key="backgroundColor" red="0.11610312937491707" green="1" blue="0.45330773520967005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egd-Y3-d4B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgV-lg-a8l">
+                                <rect key="frame" x="136" y="356" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhg-aX-SDI">
+                                <rect key="frame" x="134.5" y="379" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wgV-lg-a8l" secondAttribute="bottom" constant="290" id="30G-bG-shv"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="8eV-p8-0CH"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="centerX" secondItem="uhg-aX-SDI" secondAttribute="centerX" id="JKJ-RX-yAm"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="top" secondItem="Sx5-XN-rjr" secondAttribute="bottom" constant="7" id="NT0-cn-Bs7"/>
+                            <constraint firstItem="Sx5-XN-rjr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RqL-UB-YdK"/>
+                            <constraint firstItem="Sx5-XN-rjr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gEa-M0-l0w"/>
+                            <constraint firstItem="uhg-aX-SDI" firstAttribute="top" secondItem="wgV-lg-a8l" secondAttribute="bottom" constant="2" id="jtA-te-I8J"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="centerX" secondItem="Sx5-XN-rjr" secondAttribute="centerX" id="vex-7e-U7w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="Sx5-XN-rjr" id="VUo-aP-hOx"/>
+                        <outlet property="recordingLabel" destination="wgV-lg-a8l" id="fKA-5f-prb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
