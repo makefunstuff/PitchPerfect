@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx5-XN-rjr">
-                                <rect key="frame" x="163" y="318" width="49" height="31"/>
+                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.11610312937491707" green="1" blue="0.45330773520967005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
@@ -26,26 +26,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgV-lg-a8l">
-                                <rect key="frame" x="136" y="356" width="103" height="21"/>
+                                <rect key="frame" x="136.5" y="355.5" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhg-aX-SDI">
-                                <rect key="frame" x="134.5" y="379" width="106" height="30"/>
+                                <rect key="frame" x="134.5" y="378" width="106" height="30"/>
                                 <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssT-eh-ViS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wgV-lg-a8l" secondAttribute="bottom" constant="290" id="30G-bG-shv"/>
-                            <constraint firstItem="wgV-lg-a8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="8eV-p8-0CH"/>
-                            <constraint firstItem="wgV-lg-a8l" firstAttribute="centerX" secondItem="uhg-aX-SDI" secondAttribute="centerX" id="JKJ-RX-yAm"/>
-                            <constraint firstItem="wgV-lg-a8l" firstAttribute="top" secondItem="Sx5-XN-rjr" secondAttribute="bottom" constant="7" id="NT0-cn-Bs7"/>
+                            <constraint firstItem="uhg-aX-SDI" firstAttribute="top" secondItem="wgV-lg-a8l" secondAttribute="bottom" constant="1.5" id="FeG-Yx-opN"/>
                             <constraint firstItem="Sx5-XN-rjr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RqL-UB-YdK"/>
                             <constraint firstItem="Sx5-XN-rjr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gEa-M0-l0w"/>
-                            <constraint firstItem="uhg-aX-SDI" firstAttribute="top" secondItem="wgV-lg-a8l" secondAttribute="bottom" constant="2" id="jtA-te-I8J"/>
-                            <constraint firstItem="wgV-lg-a8l" firstAttribute="centerX" secondItem="Sx5-XN-rjr" secondAttribute="centerX" id="vex-7e-U7w"/>
+                            <constraint firstItem="uhg-aX-SDI" firstAttribute="centerX" secondItem="wgV-lg-a8l" secondAttribute="centerX" id="h21-GS-wfe"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="centerX" secondItem="Sx5-XN-rjr" secondAttribute="centerX" id="kVV-Tg-GPb"/>
+                            <constraint firstItem="wgV-lg-a8l" firstAttribute="top" secondItem="Sx5-XN-rjr" secondAttribute="bottom" constant="7" id="zZo-QG-mto"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,6 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
